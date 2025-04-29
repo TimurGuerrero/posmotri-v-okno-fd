@@ -73,10 +73,19 @@ ol {
   padding: 6px;
 }
 
+.button:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
 .content {
   position: relative;
   display: grid;
-  padding: 133px 30px;
+  padding: 130px 30px;
   grid-template-columns: auto 399px;
   grid-template-areas: "result content__details";
   gap: 30px;
@@ -93,7 +102,7 @@ ol {
 .result__video-container {
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   align-items: end;
   object-fit: cover;
 }
@@ -111,12 +120,12 @@ ol {
   grid-template-columns: 1fr 1fr 194px;
   align-items: end;
   gap: 40px;
-  padding-bottom: 5px;
   justify-content: space-between;
 }
 
 .search-form__fieldset {
   border: none;
+  padding-bottom: 4px;
 }
 
 .search-form__fieldset-title {
@@ -125,8 +134,9 @@ ol {
   font-size: inherit;
   line-height: 100%;
   letter-spacing: 0;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
 }
+
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #ffffffb2;
@@ -163,13 +173,23 @@ input[type="checkbox"]:checked + span {
   font-size: inherit;
   font-weight: 400;
   font-style: normal;
-  line-height: 22px;
-  color: #ffffffb2;
+  color: rgba(255, 255, 255, 0.7);
   background-color: inherit;
-  padding-top: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: -3px;
   border-top: 1px solid #ffffffb2;
   border-bottom: 1px solid #ffffffb2;
   appearance: none;
+}
+
+.search-form__textfield:hover {
+  cursor: text;
+}
+
+.search-form__textfield:active {
+  width: 223px; 
+  border: 1px solid #ffffffb2;
 }
 
 .search-form__textfield:focus {
@@ -180,7 +200,7 @@ input[type="checkbox"]:checked + span {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 }
 
 .search-form__checkbox:checked + .search-form__checkbox::after {
@@ -191,7 +211,8 @@ input[type="checkbox"]:checked + span {
   background-color: #fff;
 }
 
-.search-form__pseudo-checkbox {
+.search-form__label-text:hover {
+  border-bottom: 1px solid #fff;
 }
 
 .search-form__label-text {
@@ -218,7 +239,6 @@ input[type="checkbox"]:checked + span {
 .content__details {
   grid-area: content__details;
   width: 100%;
-  max-height: 534px;
   display: flex;
   flex-direction: column;
 }
@@ -242,6 +262,8 @@ input[type="checkbox"]:checked + span {
 
 .content__list-container {
   overflow-y: auto;
+  max-height: 305px;
+  padding-bottom: 2px;
 }
 
 .content__list {
@@ -253,10 +275,20 @@ input[type="checkbox"]:checked + span {
 
 .content__list-item {
   display: flex;
+  justify-content: space-around;
+}
+
+.content__list-item:hover {
+  text-decoration: underline;
+}
+
+.content__list-item:active {
+  background-color: #545050;
 }
 
 .content__card-link {
   text-decoration: none;
+  text-decoration-skip-ink: none;
   color: #fff;
 }
 
@@ -265,11 +297,23 @@ input[type="checkbox"]:checked + span {
   outline: none;
 }
 
-.content__card-link:focus-visible {
+.content__card-link:active {
+  display: block;
+  background-color: #545050;
+  
+}
+
+.content__list-item:has(:focus-visible) {
   display: block;
   outline: 1px solid #ffffff;
-  outline-offset: 1px;
+  outline-offset: -1px;
 }
+
+.content__card-link:has(:active) {
+  display: block;
+  background-color: #545050;
+}
+
 
 .content__video-card {
   display: flex;
@@ -277,8 +321,7 @@ input[type="checkbox"]:checked + span {
 
 .content__video-card-description-container {
   flex-grow: 1;
-  width: 196px;
-  padding-left: 2px;
+  padding-top: 3px;
 }
 
 .content__video-card-title {
@@ -297,25 +340,25 @@ input[type="checkbox"]:checked + span {
 .content__video-card-description {
   width: 196px;
   font-weight: 400;
-  padding-top: 6px;
+  padding-top: 4px;
   font-size: 17px;
+  letter-spacing: 0.02em;
   line-height: 16.2px; /* Используйте 1 для более предсказуемого поведения */
   font-family: inherit;
   font-style: normal;
-  overflow: hidden; /* Скрываем переполнение */
-  white-space: nowrap; /* Запрещаем перенос строк */
-  text-overflow: ellipsis; /* Заменяем переполнение на "…" */
   max-width: 100%; /* Убедитесь, что родительский элемент имеет фиксированную ширину */
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* Скрываем переполнение */
+  text-overflow: ellipsis; /* Заменяем переполнение на "…" */
 }
 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-
-  position: relative;
   object-fit: cover;
   object-position: center; /* выравнивание изображения по центру */
-  flex-grow: 1;
 }
 
 .more-button-template {
@@ -323,7 +366,7 @@ input[type="checkbox"]:checked + span {
 
 .more-button {
   margin-top: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   margin-left: 2px;
   width: 99%;
 }
