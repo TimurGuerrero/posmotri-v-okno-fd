@@ -70,7 +70,7 @@ ol {
   border: 1px solid #fff;
   margin: 0;
   font-weight: bold;
-  padding: 6px;
+  padding: 0.33em;
 }
 
 .button:hover {
@@ -138,13 +138,11 @@ ol {
   padding-bottom: 6px;
 }
 
-
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #ffffffb2;
   outline-offset: 2px;
   border: none;
   cursor: pointer;
-
 }
 
 .search-form__label:focus-visible {
@@ -167,21 +165,13 @@ input[type="checkbox"]:checked + span {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  offset: -5px;
-outline: 1px solid #1b1919;
-outline-offset: -2px;
+  outline: 1px solid #1b1919;
+  outline-offset: -2px;
 }
-
 
 .search-form__textfield {
   all: unset;
   width: 225px;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: 400;
-  font-style: normal;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: inherit;
   padding-top: 2px;
   padding-bottom: 2px;
   margin-bottom: -3px;
@@ -195,7 +185,7 @@ outline-offset: -2px;
 }
 
 .search-form__textfield:active {
-  width: 223px; 
+  width: 223px;
   border: 1px solid #ffffffb2;
 }
 
@@ -223,6 +213,11 @@ outline-offset: -2px;
 }
 
 .search-form__label-text {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  font-style: normal;
+  background-color: inherit;
 }
 
 .search-form__submit-button {
@@ -238,7 +233,6 @@ outline-offset: -2px;
   outline-offset: 1px;
   border: 1px solid;
   cursor: pointer;
-  padding: -5px;
 }
 
 /* Правый раздел страницы */
@@ -255,7 +249,7 @@ outline-offset: -2px;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
-  font-family: Oswald, Oswald family;
+  font-family: Oswald, 'Oswald family';
   text-transform: uppercase;
 }
 
@@ -308,7 +302,6 @@ outline-offset: -2px;
 .content__card-link:active {
   display: block;
   background-color: #545050;
-  
 }
 
 .content__list-item:has(:focus-visible) {
@@ -321,7 +314,6 @@ outline-offset: -2px;
   display: block;
   background-color: #545050;
 }
-
 
 .content__video-card {
   display: flex;
@@ -369,12 +361,8 @@ outline-offset: -2px;
   object-position: center;
 }
 
-.more-button-template {
-}
-
 .more-button {
   margin-top: 30px;
-  margin-bottom: px;
   margin-left: 2px;
   width: 99%;
 }
