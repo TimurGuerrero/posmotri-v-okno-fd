@@ -105,6 +105,7 @@ ol {
   margin-bottom: 18px;
   align-items: end;
   object-fit: cover;
+  position: relative;
 }
 .result__video-container .result__video {
   width: 100%;
@@ -140,9 +141,10 @@ ol {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #ffffffb2;
-  outline-offset: 1px;
+  outline-offset: 2px;
   border: none;
   cursor: pointer;
+
 }
 
 .search-form__label:focus-visible {
@@ -161,14 +163,19 @@ ol {
 }
 
 input[type="checkbox"]:checked + span {
+  background-color: #d9d9d9;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  offset: -5px;
+outline: 1px solid #1b1919;
+outline-offset: -2px;
 }
+
 
 .search-form__textfield {
   all: unset;
-  width: 225px; /* Под вопросом */
+  width: 225px;
   font-family: inherit;
   font-size: inherit;
   font-weight: 400;
@@ -244,7 +251,7 @@ input[type="checkbox"]:checked + span {
 }
 
 .title {
-  padding-bottom: 15px;
+  padding-bottom: 16px;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -261,6 +268,7 @@ input[type="checkbox"]:checked + span {
 }
 
 .content__list-container {
+  position: relative;
   overflow-y: auto;
   max-height: 305px;
   padding-bottom: 2px;
@@ -328,13 +336,13 @@ input[type="checkbox"]:checked + span {
   width: 196px;
   font-weight: 700;
   font-size: 30px;
-  line-height: 1; /* Используйте 1 для более предсказуемого поведения */
+  line-height: 1;
   font-family: Oswald, sans-serif;
   text-transform: uppercase;
-  overflow: hidden; /* Скрываем переполнение */
-  white-space: nowrap; /* Запрещаем перенос строк */
-  text-overflow: ellipsis; /* Заменяем переполнение на "…" */
-  max-width: 100%; /* Убедитесь, что родительский элемент имеет фиксированную ширину */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .content__video-card-description {
@@ -343,22 +351,22 @@ input[type="checkbox"]:checked + span {
   padding-top: 4px;
   font-size: 17px;
   letter-spacing: 0.02em;
-  line-height: 16.2px; /* Используйте 1 для более предсказуемого поведения */
+  line-height: 16.2px;
   font-family: inherit;
   font-style: normal;
-  max-width: 100%; /* Убедитесь, что родительский элемент имеет фиксированную ширину */
+  max-width: 100%;
   -webkit-line-clamp: 4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  overflow: hidden; /* Скрываем переполнение */
-  text-overflow: ellipsis; /* Заменяем переполнение на "…" */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
   object-fit: cover;
-  object-position: center; /* выравнивание изображения по центру */
+  object-position: center;
 }
 
 .more-button-template {
@@ -366,7 +374,7 @@ input[type="checkbox"]:checked + span {
 
 .more-button {
   margin-top: 30px;
-  margin-bottom: 2px;
+  margin-bottom: px;
   margin-left: 2px;
   width: 99%;
 }
